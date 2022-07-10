@@ -58,6 +58,9 @@ const addPost = function (content) {
   };
   tweeter.addPost(newPost);
   renderer(tweeter.getPosts());
+  deletePost();
+  newComment();
+  deleteComment();
 };
 
 const removePost = function (postID) {
@@ -68,6 +71,9 @@ const removePost = function (postID) {
     }
   }
   renderer(tweeter.getPosts());
+  deletePost();
+  newComment();
+  deleteComment();
 };
 
 const addComment = function (postID, text) {
@@ -83,6 +89,9 @@ const addComment = function (postID, text) {
     }
   }
   renderer(tweeter.getPosts());
+  deletePost();
+  newComment();
+  deleteComment();
 };
 
 const removeComment = function (postID, commentID) {
@@ -98,4 +107,7 @@ const removeComment = function (postID, commentID) {
     }
   }
   renderer(tweeter.getPosts());
+  deletePost();
+  newComment();
+  deleteComment();
 };
