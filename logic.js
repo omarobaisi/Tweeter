@@ -57,10 +57,8 @@ const addPost = function (content) {
     comments: [],
   };
   tweeter.addPost(newPost);
-  renderer(tweeter.getPosts());
-  deletePost();
-  newComment();
-  deleteComment();
+  Renderer();
+  events();
 };
 
 const removePost = function (postID) {
@@ -70,10 +68,8 @@ const removePost = function (postID) {
       posts.splice(i, 1);
     }
   }
-  renderer(tweeter.getPosts());
-  deletePost();
-  newComment();
-  deleteComment();
+  Renderer();
+  events();
 };
 
 const addComment = function (postID, text) {
@@ -88,10 +84,8 @@ const addComment = function (postID, text) {
       post.comments.push(newComment);
     }
   }
-  renderer(tweeter.getPosts());
-  deletePost();
-  newComment();
-  deleteComment();
+  Renderer();
+  events();
 };
 
 const removeComment = function (postID, commentID) {
@@ -106,8 +100,6 @@ const removeComment = function (postID, commentID) {
       }
     }
   }
-  renderer(tweeter.getPosts());
-  deletePost();
-  newComment();
-  deleteComment();
+  Renderer();
+  events();
 };
